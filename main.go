@@ -1,7 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/jboursiquot/go-proverbs"
+)
 
 func main() {
-	fmt.Println("Test")
+	fmt.Println(getProverb())
+}
+
+func getProverb() string {
+	return proverbs.Random().Saying
 }
